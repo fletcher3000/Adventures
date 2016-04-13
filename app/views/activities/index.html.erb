@@ -25,9 +25,15 @@
         <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+<% @activity_pics.shuffle.each do |pic| %>
+  <%= image_tag pic, class: 'img-responsive' %>
+<% end %>
+</tbody>
 </table>
 
 <br>
-
+<button class="btn btn-primary" type="submit">Button</button>
+<button class="btn btn-success" type="submit">Button</button>
+<button class="btn btn-warning" type="submit">Button</button>
+<button class="btn btn-danger" type="submit">Button</button>
 <%= link_to 'New Activity', new_activity_path %>

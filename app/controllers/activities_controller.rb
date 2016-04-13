@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    @activity_pics = ['hiking.jpeg', 'surf.jpeg', 'watersport.jpeg', 'explore.jpeg']
   end
 
   # GET /activities/1
